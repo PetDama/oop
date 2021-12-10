@@ -1,23 +1,22 @@
 ﻿using System;
 
-namespace oop
-
+namespace OOP1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Introduceti numarul de valori cerute din" +
-                " sirul lui Fibonacci!");
+            Console.WriteLine("A se introduce numar valori cerute din" +
+                " sirul Fibonacci");
             int n;
             n = Int32.Parse(Console.ReadLine());
 
-            int[] vector = arrayHelper.Fibonacci(n);
+            int[] vector = ArrayHelper.Fibonacci(n);
 
             for (int i = 0; i < vector.Length; i++)
                 Console.WriteLine(vector[i] + " ");
 
-            Console.WriteLine("Introduceti numarul de elemente din vector!");
+            Console.WriteLine("Să se introducă numărul de elemente din vector");
 
             int nr = Int32.Parse(Console.ReadLine());
             int[] vector1 = new int[nr];
@@ -28,13 +27,13 @@ namespace oop
                 vector1[i] = Int32.Parse(Console.ReadLine());
 
             }
-            Console.WriteLine("Introduceti valoarea cautata!");
+            Console.WriteLine("Să se introducă valoarea căutată");
             int element = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine(arrayHelper.Frecventa(vector1, element));
+            Console.WriteLine(ArrayHelper.Frecventa(vector1, element));
 
 
-            Console.WriteLine("Introduceti numarul de linii din matrice!");
+            Console.WriteLine("Să se introducă numărul de linii din matrice");
 
             int n1 = Int32.Parse(Console.ReadLine());
             int[,] matrix = new int[n1, n1];
@@ -47,10 +46,10 @@ namespace oop
 
                 }
             }
-            if (arrayHelper.Identitate(matrix) == true)
-                Console.WriteLine("Este matrice identitate!");
+            if (ArrayHelper.Identitate(matrix) == true)
+                Console.WriteLine("Este matrice identitate");
             else
-                Console.WriteLine("Nu este matrice identitate!");
+                Console.WriteLine("Nu este matrice identitate");
         }
     }
 }
